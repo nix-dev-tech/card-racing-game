@@ -6,6 +6,86 @@
     <script src="index.js"></script>
     <header>
     </header>
+    <div id="playModal" class="play-modal">
+        <div class="play-modal-content">
+            <header style="font-size: 24px; font-weight: bold; text-align: center;">
+                Car Racing
+            </header>
+            <hr size="5" color="red">
+            <div class="playerInfo">
+            <table style="margin: auto;" CELLSPACING = "10">
+                <tr>
+                    <td>
+                        <label for="player1Name">Player1:</label>
+                        <input type="text" id="player1Name" name="player1Name">
+                    </td>
+                    <td>
+                        <label for="player2Name">Player2:</label>
+                        <input type="text" id="player2Name" name="player2Name">
+                    </td>
+                    <td>
+                        <label for="player3Name">Player3:</label>
+                        <input type="text" id="player3Name" name="player3Name">
+                    </td>
+                    <td>
+                        <label for="player4Name">Player4:</label>
+                        <input type="text" id="player4Name" name="player4Name">
+                    </td>
+                </tr>
+            </table>
+            </div>
+            <div class="start">
+                <button id="start-btn">Create New Game!</button>
+            </div>
+        </div>
+    </div>
+    <div id="winModal" class="win-modal">
+        <div class="win-modal-content" style="background-image:url(Celebration.gif);">
+            <header style="font-size: 32px; font-weight: bold; text-align: center; color: aliceblue;">
+                Congratulations!!!
+            </header>
+            <hr size="5" color="red">
+            <div class="winnerInfo">
+            <table class="winners" style="margin: auto;" CELLSPACING = "10">
+                <tr id="winner1" class="hidden">
+                    <td style="height: 100px; width: 120px;">
+                        <img src="Car1.png">
+                    </td>
+                    <td>
+                        <span id="winner1Name" class="player1Style">Player1</span>
+                    </td>
+                </tr>
+                <tr id="winner2" class="hidden">
+                    <td style="height: 100px; width: 120px;">
+                        <img src="Car2.png">
+                    </td>
+                    <td>
+                        <span id="winner2Name" class="player2Style">Player1</span>
+                    </td>
+                </tr>
+                <tr id="winner3" class="hidden">
+                    <td style="height: 100px; width: 120px;">
+                        <img src="Car3.png">
+                    </td>
+                    <td>
+                        <span id="winner3Name" class="player3Style">Player1</span>
+                    </td>
+                </tr>
+                <tr id="winner4" class="hidden">
+                    <td style="height: 100px; width: 120px;">
+                        <img src="Car4.png">
+                    </td>
+                    <td>
+                        <span id="winner4Name" class="player4Style">Player1</span>
+                    </td>
+                </tr>
+            </table>
+            </div>
+            <div class="restart">
+                <button id="restart-btn">PlayAgain</button>
+            </div>
+        </div>
+    </div>
     <body>
 
         <div id="first" class="letters hidden1">C</div>
@@ -20,7 +100,7 @@
         <div id="tenth" class="letters hidden1">g</div>
         <br><br><br><br><br><br>
 
-        <div>
+        <div id="platformDiv" class="hidden">
             <table class = "platform" CELLSPACING = "2">
                 <tr>
                     <td>
@@ -1345,7 +1425,7 @@
             </table>
         </div>
 
-        <div class="road">
+        <div id="roadDiv" class="road hidden">
             <div id="car1" class="carDiv">
                 <img class="car" src="car1.png">
             </div>
