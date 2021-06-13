@@ -1,0 +1,757 @@
+.letters{
+  font-size: 50px;
+  font-family: fantasy;
+  font-style: oblique;
+  text-shadow: 2px 2px red;
+  position: absolute;
+  left: 95%;
+  top: 0%
+}
+
+.player1Style{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: darkblue;
+}
+
+.player2Style{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: orangered;
+}
+
+.player3Style{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: rgb(43, 42, 42);
+}
+
+.player4Style{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: forestgreen;
+}
+
+.header_animationfirst{
+  position: absolute;
+  animation-name: header_entryfirst;
+  animation-duration: 2500ms;
+}
+
+@keyframes header_entryfirst{
+  0%{left: 95%; top: 0%; transform: rotate(90deg);}
+  20%{left: 95%; top: 5%; transform: rotate(10deg);}
+  90%{left: 0%; top: 5%; transform: rotate(-30deg);}
+  100%{left: 0%; top: 5%;}
+}
+
+.header_animationsecond{
+  position: absolute;
+  animation-name: header_entrysecond;
+  animation-duration: 2500ms;
+}
+
+@keyframes header_entrysecond{
+  0%{left: 95%; top: 0%; transform: rotate(90deg);}
+  20%{left: 95%; top: 5%; transform: rotate(10deg);}
+  90%{left: 2%; top: 5%; transform: rotate(-30deg);}
+  100%{left: 2%; top: 5%;}
+}
+
+.header_animationthird{
+  position: absolute;
+  animation-name: header_entrythird;
+  animation-duration: 2500ms;
+}
+
+@keyframes header_entrythird{
+  0%{left: 95%; top: 0%; transform: rotate(90deg);}
+  20%{left: 95%; top: 5%; transform: rotate(10deg);}
+  90%{left: 4%; top: 5%; transform: rotate(-30deg);}
+  100%{left: 4%; top: 5%;}
+}
+
+.header_animationfourth{
+  position: absolute;
+  animation-name: header_entryfourth;
+  animation-duration: 2500ms;
+}
+
+@keyframes header_entryfourth{
+  0%{left: 95%; top: 0%; transform: rotate(90deg);}
+  20%{left: 95%; top: 5%; transform: rotate(10deg);}
+  90%{left: 6%; top: 5%; transform: rotate(-30deg);}
+  100%{left: 6%; top: 5%;}
+}
+
+.header_animationfifth{
+  position: absolute;
+  animation-name: header_entryfifth;
+  animation-duration: 2500ms;
+}
+
+@keyframes header_entryfifth{
+  0%{left: 95%; top: 0%; transform: rotate(90deg);}
+  20%{left: 95%; top: 5%; transform: rotate(10deg);}
+  90%{left: 8%; top: 5%; transform: rotate(-30deg);}
+  100%{left: 8%; top: 5%;}
+}
+
+.header_animationsixth{
+  position: absolute;
+  animation-name: header_entrysixth;
+  animation-duration: 2500ms;
+}
+
+@keyframes header_entrysixth{
+  0%{left: 95%; top: 0%; transform: rotate(90deg);}
+  20%{left: 95%; top: 5%; transform: rotate(10deg);}
+  90%{left: 10%; top: 5%; transform: rotate(-30deg);}
+  100%{left: 10%; top: 5%;}
+}
+
+.header_animationseventh{
+  position: absolute;
+  animation-name: header_entryseventh;
+  animation-duration: 2500ms;
+}
+
+@keyframes header_entryseventh{
+  0%{left: 95%; top: 0%; transform: rotate(90deg);}
+  20%{left: 95%; top: 5%; transform: rotate(10deg);}
+  90%{left: 12%; top: 5%; transform: rotate(-30deg);}
+  100%{left: 12%; top: 5%;}
+}
+
+.header_animationeighth{
+  position: absolute;
+  animation-name: header_entryeighth;
+  animation-duration: 2500ms;
+}
+
+@keyframes header_entryeighth{
+  0%{left: 95%; top: 0%; transform: rotate(90deg);}
+  20%{left: 95%; top: 5%; transform: rotate(10deg);}
+  90%{left: 14%; top: 5%; transform: rotate(-30deg);}
+  100%{left: 14%; top: 5%;}
+}
+
+.header_animationninth{
+  position: absolute;
+  animation-name: header_entryninth;
+  animation-duration: 2500ms;
+}
+
+@keyframes header_entryninth{
+  0%{left: 95%; top: 0%; transform: rotate(90deg);}
+  20%{left: 95%; top: 5%; transform: rotate(10deg);}
+  90%{left: 16%; top: 5%; transform: rotate(-30deg);}
+  100%{left: 16%; top: 5%;}
+}
+
+.header_animationtenth{
+  position: absolute;
+  animation-name: header_entrytenth;
+  animation-duration: 2500ms;
+}
+
+@keyframes header_entrytenth{
+  0%{left: 95%; top: 0%; transform: rotate(90deg);}
+  20%{left: 95%; top: 5%; transform: rotate(10deg);}
+  90%{left: 18%; top: 5%; transform: rotate(-30deg);}
+  100%{left: 18%; top: 5%;}
+}
+
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border: 2px solid red;
+} 
+
+.scene {
+    width: 150px;
+    height: 200px;
+    margin: 40px 0;
+    perspective: 600px;
+    position: relative;
+  }
+
+.card__back{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.noClick{
+  pointer-events: none;
+}
+
+.is_flip{
+    animation-name: flip;
+    animation-duration: 1600ms;
+    transform-style: preserve-3d;
+}
+
+.card__face{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.is_reverseflip{
+    animation-name: reverseflip;
+    animation-duration: 1400ms;
+    transform-style: preserve-3d;
+}
+
+img{
+    height: 200px;
+    width: 150px;
+}
+
+@keyframes flip {
+    0%   {left:0px; top:0px;}
+    100% {left:120px; top:0px; transform: rotateY(180deg);}
+  }
+
+@keyframes reverseflip {
+    0%   {left:0px; top:0px;}
+    25%   {left:-120px; top:0px; transform: rotateY(-90deg);}
+    100% {left:0px; top:0px; transform: rotateY(0deg);}
+  }
+
+.hidden{
+    display: none;
+}
+
+.hidden1{
+  visibility: hidden;
+}
+
+.card{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+
+.backgroundDiv{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: auto;
+    height: auto;
+}
+
+.road{
+  background-image: url("road.png");
+  width: 1320px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.car{
+    width: 120px;
+    height: 100px;
+}
+
+.carDiv{
+    width: 120px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    position: relative;
+}
+
+.accelerate1Pos1{
+    animation-name: accelerateCar1Pos1;
+    animation-duration: 1500ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar1Pos1 {
+    0%   {left: 0px; top:0px; transform: rotate(-10deg);}
+    100% {left: 120px; top:0px;}
+  }
+
+  .accelerate1Pos2{
+    animation-name: accelerateCar1Pos2;
+    animation-duration: 1500ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar1Pos2 {
+    0%   {left: 120px; top:0px; transform: rotate(-10deg);}
+    100% {left: 240px; top:0px;}
+  }
+
+  .accelerate1Pos3{
+    animation-name: accelerateCar1Pos3;
+    animation-duration: 1500ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar1Pos3 {
+    0%   {left: 240px; top:0px; transform: rotate(-10deg);}
+    100% {left: 360px; top:0px;}
+  }
+
+  .accelerate1Pos4{
+    animation-name: accelerateCar1Pos4;
+    animation-duration: 1500ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar1Pos4 {
+    0%   {left: 360px; top:0px; transform: rotate(-10deg);}
+    100% {left: 480px; top:0px;}
+  }
+
+  .accelerate1Pos5{
+    animation-name: accelerateCar1Pos5;
+    animation-duration: 1500ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar1Pos5 {
+    0%   {left: 480px; top:0px; transform: rotate(-10deg);}
+    100% {left: 600px; top:0px;}
+  }
+
+  .accelerate1Pos6{
+    animation-name: accelerateCar1Pos6;
+    animation-duration: 1500ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar1Pos6 {
+    0%   {left: 600px; top:0px; transform: rotate(-10deg);}
+    100% {left: 720px; top:0px;}
+  }
+
+  .accelerate1Pos7{
+    animation-name: accelerateCar1Pos7;
+    animation-duration: 1500ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar1Pos7 {
+    0%   {left: 720px; top:0px; transform: rotate(-10deg);}
+    100% {left: 840px; top:0px;}
+  }
+
+  .accelerate1Pos8{
+    animation-name: accelerateCar1Pos8;
+    animation-duration: 1500ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar1Pos8 {
+    0%   {left: 840px; top:0px; transform: rotate(-10deg);}
+    100% {left: 960px; top:0px;}
+  }
+
+  .accelerate1Pos9{
+    animation-name: accelerateCar1Pos9;
+    animation-duration: 1500ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar1Pos9 {
+    0%   {left: 960px; top:0px; transform: rotate(-10deg);}
+    100% {left: 1080px; top:0px;}
+  }
+
+  .accelerate1Pos10{
+    animation-name: accelerateCar1Pos10;
+    animation-duration: 1500ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar1Pos10 {
+    0%   {left: 1080px; top:0px; transform: rotate(-10deg);}
+    100% {left: 1200px; top:0px;}
+  }
+
+  .accelerate2Pos1{
+    animation-name: accelerateCar2Pos1;
+    animation-duration: 750ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar2Pos1 {
+    0%   {left:0px; top:0px; transform: rotate(5deg);}
+    100% {left:120px; top:0px;}
+  }
+
+  .accelerate2Pos2{
+    animation-name: accelerateCar2Pos2;
+    animation-duration: 750ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar2Pos2 {
+    0%   {left:120px; top:0px; transform: rotate(5deg);}
+    100% {left:240px; top:0px;}
+  }
+
+  .accelerate2Pos3{
+    animation-name: accelerateCar2Pos3;
+    animation-duration: 750ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar2Pos3 {
+    0%   {left:240px; top:0px; transform: rotate(5deg);}
+    100% {left:360px; top:0px;}
+  }
+
+  .accelerate2Pos4{
+    animation-name: accelerateCar2Pos4;
+    animation-duration: 750ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar2Pos4 {
+    0%   {left:360px; top:0px; transform: rotate(5deg);}
+    100% {left:480px; top:0px;}
+  }
+
+  .accelerate2Pos5{
+    animation-name: accelerateCar2Pos5;
+    animation-duration: 750ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar2Pos5 {
+    0%   {left:480px; top:0px; transform: rotate(5deg);}
+    100% {left:600px; top:0px;}
+  }
+
+  .accelerate2Pos6{
+    animation-name: accelerateCar2Pos6;
+    animation-duration: 750ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar2Pos6 {
+    0%   {left:600px; top:0px; transform: rotate(5deg);}
+    100% {left:720px; top:0px;}
+  }
+
+  .accelerate2Pos7{
+    animation-name: accelerateCar2Pos7;
+    animation-duration: 750ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar2Pos7 {
+    0%   {left:720px; top:0px; transform: rotate(5deg);}
+    100% {left:840px; top:0px;}
+  }
+
+  .accelerate2Pos8{
+    animation-name: accelerateCar2Pos8;
+    animation-duration: 750ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar2Pos8 {
+    0%   {left:840px; top:0px; transform: rotate(5deg);}
+    100% {left:960px; top:0px;}
+  }
+
+  .accelerate2Pos9{
+    animation-name: accelerateCar2Pos9;
+    animation-duration: 750ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar2Pos9 {
+    0%   {left:960px; top:0px; transform: rotate(5deg);}
+    100% {left:1080px; top:0px;}
+  }
+
+  .accelerate2Pos10{
+    animation-name: accelerateCar2Pos10;
+    animation-duration: 750ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar2Pos10 {
+    0%   {left:1080px; top:0px; transform: rotate(5deg);}
+    100% {left:1200px; top:0px;}
+  }
+
+  .accelerate3Pos1{
+    animation-name: accelerateCar3Pos1;
+    animation-duration: 850ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar3Pos1 {
+    0%   {left:0px; top:0px; transform: rotate(-15deg);}
+    100% {left:120px; top:0px;}
+  }
+
+  .accelerate3Pos2{
+    animation-name: accelerateCar3Pos2;
+    animation-duration: 850ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar3Pos2 {
+    0%   {left:120px; top:0px; transform: rotate(-15deg);}
+    100% {left:240px; top:0px;}
+  }
+
+  .accelerate3Pos3{
+    animation-name: accelerateCar3Pos3;
+    animation-duration: 850ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar3Pos3 {
+    0%   {left:240px; top:0px; transform: rotate(-15deg);}
+    100% {left:360px; top:0px;}
+  }
+
+  .accelerate3Pos4{
+    animation-name: accelerateCar3Pos4;
+    animation-duration: 850ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar3Pos4 {
+    0%   {left:360px; top:0px; transform: rotate(-15deg);}
+    100% {left:480px; top:0px;}
+  }
+
+  .accelerate3Pos5{
+    animation-name: accelerateCar3Pos5;
+    animation-duration: 850ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar3Pos5 {
+    0%   {left:480px; top:0px; transform: rotate(-15deg);}
+    100% {left:600px; top:0px;}
+  }
+
+  .accelerate3Pos6{
+    animation-name: accelerateCar3Pos6;
+    animation-duration: 850ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar3Pos6 {
+    0%   {left:600px; top:0px; transform: rotate(-15deg);}
+    100% {left:720px; top:0px;}
+  }
+
+  .accelerate3Pos7{
+    animation-name: accelerateCar3Pos7;
+    animation-duration: 850ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar3Pos7 {
+    0%   {left:720px; top:0px; transform: rotate(-15deg);}
+    100% {left:840px; top:0px;}
+  }
+
+  .accelerate3Pos8{
+    animation-name: accelerateCar3Pos8;
+    animation-duration: 850ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar3Pos8 {
+    0%   {left:840px; top:0px; transform: rotate(-15deg);}
+    100% {left:960px; top:0px;}
+  }
+
+  .accelerate3Pos9{
+    animation-name: accelerateCar3Pos9;
+    animation-duration: 850ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar3Pos9 {
+    0%   {left:960px; top:0px; transform: rotate(-15deg);}
+    100% {left:1080px; top:0px;}
+  }
+
+  .accelerate3Pos10{
+    animation-name: accelerateCar3Pos10;
+    animation-duration: 850ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar3Pos10 {
+    0%   {left:1080px; top:0px; transform: rotate(-15deg);}
+    100% {left:1200px; top:0px;}
+  }
+
+  .accelerate4Pos1{
+    animation-name: accelerateCar4Pos1;
+    animation-duration: 1200ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar4Pos1 {
+    0%   {left:0px; top:0px;}
+    100% {left:120px; top:0px;}
+  }
+  
+  .accelerate4Pos2{
+    animation-name: accelerateCar4Pos2;
+    animation-duration: 1200ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar4Pos2 {
+    0%   {left:120px; top:0px;}
+    100% {left:240px; top:0px;}
+  }
+ 
+  .accelerate4Pos3{
+    animation-name: accelerateCar4Pos3;
+    animation-duration: 1200ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar4Pos3 {
+    0%   {left:240px; top:0px;}
+    100% {left:360px; top:0px;}
+  }
+  
+  .accelerate4Pos4{
+    animation-name: accelerateCar4Pos4;
+    animation-duration: 1200ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar4Pos4 {
+    0%   {left:360px; top:0px;}
+    100% {left:480px; top:0px;}
+  }
+
+  .accelerate4Pos5{
+    animation-name: accelerateCar4Pos5;
+    animation-duration: 1200ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar4Pos5 {
+    0%   {left:480px; top:0px;}
+    100% {left:600px; top:0px;}
+  }
+
+  .accelerate4Pos6{
+    animation-name: accelerateCar4Pos6;
+    animation-duration: 1200ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar4Pos6 {
+    0%   {left:600px; top:0px;}
+    100% {left:720px; top:0px;}
+  }
+
+  .accelerate4Pos7{
+    animation-name: accelerateCar4Pos7;
+    animation-duration: 1200ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar4Pos7 {
+    0%   {left:720px; top:0px;}
+    100% {left:840px; top:0px;}
+  }
+
+  .accelerate4Pos8{
+    animation-name: accelerateCar4Pos8;
+    animation-duration: 1200ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar4Pos8 {
+    0%   {left:840px; top:0px;}
+    100% {left:960px; top:0px;}
+  }
+
+  .accelerate4Pos9{
+    animation-name: accelerateCar4Pos9;
+    animation-duration: 1200ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar4Pos9 {
+    0%   {left:960px; top:0px;}
+    100% {left:1080px; top:0px;}
+  }
+
+  .accelerate4Pos10{
+    animation-name: accelerateCar4Pos10;
+    animation-duration: 1200ms;
+    transform-style: preserve-3d;
+    position:relative;
+}
+
+@keyframes accelerateCar4Pos10 {
+    0%   {left:1080px; top:0px;}
+    100% {left:1200px; top:0px;}
+  }
+  
