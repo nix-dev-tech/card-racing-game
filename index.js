@@ -15,9 +15,11 @@ var faceToNumber = {"Two":2, "Three":3, "Four":4, "Five":5, "Six":6, "Seven":7, 
                      "Nine":9, "Ten":10, "Jack":11, "Queen":12, "King":13, "Ace":14}
 var carsPos = [0,0,0,0];
 var carAccelerate = "accelerate";
-var carTime = [1500, 750, 850, 1200];
+var carTime = [1800, 750, 850, 1200];
 var enableCardCounter = 104;
 var enableCard = 52;
+var playerName = [];
+
 
 class Card{
     constructor(suit, value){
@@ -60,17 +62,13 @@ class Deck{
 }
 
 window.onload = function(){
-    var entryIndex = 0;
-    var entryInterval = setInterval(function(){
-        entryIndex++;
-        driveAnimation(entryIndex);
-        if(entryIndex == 10){
-        clearInterval(entryInterval);
-      }
-    },300);
+    var playModal = id("playModal");
+    var winModal = id("winModal");
+    playModal.style.display = "block";
+    winModal.style.display = "none";
 
-    //card deal
-    {
+     //card deal
+     {
         deck = new Deck();
         deck.createDeck(suits, values);
         deck.shuffle();
@@ -90,26 +88,45 @@ window.onload = function(){
         }
     }
 
-    id("card52").classList.remove("noClick");
-    hideCards();
-    flipCards();
-    /*
-    var click = 1;
-    document.getElementById("car1").addEventListener("click", function(){
-        if(click===1){
-            document.getElementById("car1").classList.add("accelerate1pos1");
-            setTimeout(function(){
-                document.getElementById("car1").style.left = "120px";
-            },1500);
-            click++;
+    id("start-btn").addEventListener("click", function(){
+        let validationFlag = true;
+        //player Names
+        for(let playerNameIndex = 1; playerNameIndex <= 4; playerNameIndex++){
+            var player = "player"+playerNameIndex.toString()+"Name";
+            playerName[playerNameIndex] = (id(player).value === "") ? 
+                                        "Player" + (playerNameIndex).toString() :
+                                        id(player).value;
+            if(playerName[playerNameIndex].length > 8){
+                alert("Characters allowed for player name is 8");
+                validationFlag = false;
+                break;
+            }
+            id("player" + (playerNameIndex).toString()).innerHTML = playerName[playerNameIndex];
         }
-        else{
-            document.getElementById("car1").classList.add("accelerate1pos2");
-            setTimeout(function(){
-                document.getElementById("car1").style.left = "240px";
-            },1500);
+        
+        if(validationFlag){
+            var entryIndex = 0;
+            var entryInterval = setInterval(function(){
+                entryIndex++;
+                driveAnimation(entryIndex);
+                if(entryIndex == 10){
+                    clearInterval(entryInterval);
+                }
+            },300);
+
+            id("card52").classList.remove("noClick");
+            hideCards();
+            flipCards();
+            playModal.style.display = "none";
+            id("roadDiv").classList.remove("hidden");
+            id("platformDiv").classList.remove("hidden");
         }
-    });*/
+        
+    });
+
+    id("restart-btn").addEventListener("click", function(){
+        window.location.reload();
+    });
 }
 
 function driveAnimation(identifier){
@@ -276,6 +293,7 @@ function validateAndMoveCar(){
 }
 
 function accelerateCars(cars){
+    var winners = [];
     for(let carIndex = 0; carIndex < cars.length; carIndex++){
         carsPos[cars[carIndex]]++;
         var carClass = carAccelerate + (cars[carIndex]+1).toString() + "Pos" + carsPos[cars[carIndex]].toString();
@@ -283,6 +301,20 @@ function accelerateCars(cars){
         setTimeout(function(){
             id("car"+ (cars[carIndex]+1).toString()).style.left = (120*carsPos[cars[carIndex]]).toString()+"px";
         }, carTime[cars[carIndex]]);
+        if(carsPos[cars[carIndex]] === 10){
+            winners.push(cars[carIndex]);
+        }
+    }
+
+    if(winners.length > 0){
+        setTimeout(function(){
+            for(let winnerIndex = 0; winnerIndex < winners.length; winnerIndex++){
+                console.log(winners[winnerIndex].toString());
+                id("winner"+(winners[winnerIndex]+1).toString()).classList.remove("hidden");
+                id("winner"+(winners[winnerIndex]+1).toString()+"Name").innerHTML = playerName[winners[winnerIndex]+1];
+            }
+            winModal.style.display = "block";
+        }, 2000)
     }
 }
 
